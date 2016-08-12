@@ -1,9 +1,4 @@
-class Dose < ApplicationRecord
-  belongs_to :ingredient
+class Dose < ActiveRecord::Base
   belongs_to :cocktail
-  validates :description, presence: true
-  validates :ingredient, presence: true
-  validates :cocktail, presence: true
-  validates :cocktail, uniqueness: { scope: :ingredient }
-
+  belongs_to :ingredient
 end

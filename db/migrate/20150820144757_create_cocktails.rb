@@ -1,9 +1,9 @@
-class CreateCocktails < ActiveRecord::Migration[5.0]
+class CreateCocktails < ActiveRecord::Migration
   def change
     create_table :cocktails do |t|
       t.string :name
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end
